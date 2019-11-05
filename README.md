@@ -72,8 +72,8 @@ $ python3 apk_download.py
 
 ---
 
- - Get a working APK downloader:
- -- [GPlayDL](https://github.com/rehmatworks/gplaydl) was initially working but now getting _Login Failure_ errors during runtime.
- -- Will attempt to get [GooglePlay-API](https://github.com/NoMore201/googleplay-api) to work.
+- Get a working APK downloader:
+-- [GPlayDL](https://github.com/rehmatworks/gplaydl) was initially working but now getting _Login Failure_ errors during runtime.
+-- Will attempt to get [GooglePlay-API](https://github.com/NoMore201/googleplay-api) to work.
 
 
