@@ -9,7 +9,7 @@ APK Downloader for the Google Play Store
 
 ##### Node Version Manager (NVM)
 
-Requires Node.Js.  Follow the Install Script instructions at [GitHub - NVM](https://github.com/nvm-sh/nvm#installation-and-update).
+Requires Node.js.  Follow the Install Script instructions at [GitHub - NVM](https://github.com/nvm-sh/nvm#installation-and-update).
 
 Curl:  
 ```sh
@@ -65,7 +65,7 @@ The following files are required:
  
 Run the apk_download.py tool:
 ```sh
-python3 apk_download.py
+$ python3 apk_download.py
 ```
 
 ### Todos
