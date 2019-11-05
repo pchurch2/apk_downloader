@@ -39,8 +39,8 @@ def get_app_id(category_type):
                 apk_initial_list.append(app)
 
     else:
-        #sys.stderr.write(get_apps.stderr)
-        return null
+        sys.stderr.write(get_apps.stderr)
+        #return 
 
 
 def generate_apk_list():
