@@ -3,11 +3,15 @@ APK Downloader for the Google Play Store
 
 ---
 
+&nbsp; 
+
 ### Prerequisites
 
 ---
 
-##### Node Version Manager (NVM)
+&nbsp; 
+
+#### Node Version Manager (NVM)
 
 Requires Node.js.  Follow the Install Script instructions at [GitHub - NVM](https://github.com/nvm-sh/nvm#installation-and-update) with curl or wget:
 
@@ -36,19 +40,25 @@ Start Node:
 $ nvm use node
 ```
 
-##### Google-Play-Scraper
+&nbsp; 
+
+#### Google-Play-Scraper
 
 Requires Google-Play-Scraper.  Follow the install instructions at [GitHub - Google-Play-Scraper](https://github.com/facundoolano/google-play-scraper):
 ```sh
 $ npm install google-play-scraper
 ```
 
-##### Naked Python Tool
+&nbsp; 
+
+#### Naked Python Tool
 
 Requires the Naked Python Tool.  Follow the install instructions at [Naked Python Tool](https://github.com/facundoolano/google-play-scraper):
 ```sh
 $ npm install google-play-scraper
 ```
+
+&nbsp; 
 
 ### Installation and Usage
 
@@ -71,6 +81,8 @@ collection_type = "TOP_FREE"
 app_per_category = "5"
 ```
 
+&nbsp; 
+
 ### TODO
 
 ---
@@ -78,5 +90,3 @@ app_per_category = "5"
 - Get a working APK downloader:
 - [GPlayDL](https://github.com/rehmatworks/gplaydl) was initially working but now getting _Login Failure_ errors during runtime.
 - Will attempt to get [GooglePlay-API](https://github.com/NoMore201/googleplay-api) to work.
-
-
