@@ -64,7 +64,14 @@ Run the apk_download.py tool:
 $ python3 apk_download.py
 ```
 
-### Todos
+By default, the apk_downloader will use the TOP_FREE collection and find 5 app_ids from each category currently available on the Google Play Store.  These variables can currently be modified in apk_download.py:
+
+```
+collection_type = "TOP_FREE"
+app_per_category = "5"
+```
+
+### TODO
 
 ---
 
