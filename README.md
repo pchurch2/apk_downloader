@@ -63,9 +63,12 @@ $ npm install google-play-scraper
 ---
 
 The following files are required:
-- apk_download.py
-- app_list.js
-- category_list.js
+* apk_download.py
+  * Python 3 script to retreive app_ids and download APKs
+* app_list.js
+  * Node file used to scrape app_ids from the Google Play Store
+* category_list.js
+  * Node file used to scrape categories from the Google Play Store
  
 Run the apk_download.py tool:
 ```sh
