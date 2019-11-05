@@ -9,16 +9,12 @@ APK Downloader for the Google Play Store
 
 ##### Node Version Manager (NVM)
 
-Requires Node.js.  Follow the Install Script instructions at [GitHub - NVM](https://github.com/nvm-sh/nvm#installation-and-update).
+Requires Node.js.  Follow the Install Script instructions at [GitHub - NVM](https://github.com/nvm-sh/nvm#installation-and-update) with curl or wget:
 
-Curl:  
 ```sh
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-or
-
-WGet:
 ```sh
 $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
@@ -73,7 +69,7 @@ $ python3 apk_download.py
 ---
 
 - Get a working APK downloader:
--- [GPlayDL](https://github.com/rehmatworks/gplaydl) was initially working but now getting _Login Failure_ errors during runtime.
--- Will attempt to get [GooglePlay-API](https://github.com/NoMore201/googleplay-api) to work.
+- [GPlayDL](https://github.com/rehmatworks/gplaydl) was initially working but now getting _Login Failure_ errors during runtime.
+- Will attempt to get [GooglePlay-API](https://github.com/NoMore201/googleplay-api) to work.
 
 
