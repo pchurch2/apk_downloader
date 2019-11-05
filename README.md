@@ -27,7 +27,7 @@ Close and restart the terminal and verify installation was successful:
 $ command -v nvm
 ```
 
-Download, compile, and install the latest release of node:
+Download, compile, and install the latest release of Node:
 
 ```sh
 $ nvm install node
@@ -66,7 +66,12 @@ The following files are required:
 * apk_download.py
   * Python 3 script to retreive app_ids and download APKs
 * app_list.js
-  * Node file used to scrape app_ids from the Google Play Store
+  * 
+  
+  
+  
+  
+  file used to scrape app_ids from the Google Play Store
 * category_list.js
   * Node file used to scrape categories from the Google Play Store
  
@@ -75,7 +80,7 @@ Run the apk_download.py tool:
 $ python3 apk_download.py
 ```
 
-By default, the apk_downloader will use the TOP_FREE collection and find 5 app_ids from each category currently available on the Google Play Store.  These variables can currently be modified in apk_download.py:
+By default, the apk_downloader will use the TOP_FREE collection and find 5 app_ids from each category currently available on the Google Play Store.  These variables can be modified in apk_download.py:
 
 ```
 collection_type = "TOP_FREE"
