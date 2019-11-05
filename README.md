@@ -21,7 +21,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bas
 $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-Close and restart the terminal and verity installation was successful:
+Close and restart the terminal and verify installation was successful:
 
 ```sh
 $ command -v nvm
