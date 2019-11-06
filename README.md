@@ -66,12 +66,7 @@ The following files are required:
 * apk_download.py
   * Python 3 script to retreive app_ids and download APKs
 * app_list.js
-  * 
-  
-  
-  
-  
-  file used to scrape app_ids from the Google Play Store
+  * Node file used to scrape app_ids from the Google Play Store
 * category_list.js
   * Node file used to scrape categories from the Google Play Store
  
