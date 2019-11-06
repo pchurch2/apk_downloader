@@ -31,7 +31,7 @@ def get_app_id(category_type):
         input_apps = get_apps.stdout
         category_list = re.findall(r"appId: '.*?'", str(input_apps))
         download = re.findall(r"'(.*?)'", str(category_list))
-       
+
         # Grab non-empty apk_ids
         for app in download:
             if app != "":
@@ -40,7 +40,7 @@ def get_app_id(category_type):
 
     else:
         sys.stderr.write(get_apps.stderr)
-        #return 
+        #return
 
 
 def generate_apk_list():
@@ -48,10 +48,10 @@ def generate_apk_list():
     # Executes the category_list.js file allowing Python to control
     # Standard Output and Standar Error entries
     get_categories = muterun_js("category_list.js")
-    
+
     # If category_list.js file is successfull, get categories
     if get_categories.exitcode == 0:
-   
+
         # Parse incoming data to only grab categories
         input_categories = get_categories.stdout
         categories = re.findall(r"'(.*?)'", str(input_categories))
@@ -70,9 +70,9 @@ def generate_apk_list():
         print("\nAPKs available for download:")
         for apk in apk_download_list:
             print(apk)
-    
-    else:    
-        
+
+    else:
+
         sys.stderr.write(get_categories.stderr)
 
 
@@ -82,7 +82,7 @@ def generate_apk_list():
 
 
 def main():
-    
+
     generate_apk_list()
     #download_apks()
 

@@ -51,9 +51,9 @@ $ npm install google-play-scraper
 
 #### Naked Python Tool
 
-Requires the Naked Python Tool.  Follow the install instructions at [Naked Python Tool](https://github.com/facundoolano/google-play-scraper):
+Requires the Naked Python Tool.  Follow the install instructions at [Naked Python Tool](https://sweetme.at/2014/02/17/a-simple-approach-to-execute-a-node.js-script-from-python/):
 ```sh
-$ npm install naked
+$ pip3 install naked
 ```
 
 &nbsp;
