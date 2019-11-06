@@ -3,7 +3,7 @@ APK Downloader for the Google Play Store
 
 ---
 
-&nbsp; 
+&nbsp;
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ Start Node:
 $ nvm use node
 ```
 
-&nbsp; 
+&nbsp;
 
 #### Google-Play-Scraper
 
@@ -47,16 +47,16 @@ Requires Google-Play-Scraper.  Follow the install instructions at [GitHub - Goog
 $ npm install google-play-scraper
 ```
 
-&nbsp; 
+&nbsp;
 
 #### Naked Python Tool
 
 Requires the Naked Python Tool.  Follow the install instructions at [Naked Python Tool](https://github.com/facundoolano/google-play-scraper):
 ```sh
-$ npm install google-play-scraper
+$ npm install naked
 ```
 
-&nbsp; 
+&nbsp;
 
 ### Installation and Usage
 
@@ -69,7 +69,7 @@ The following files are required:
   * Node file used to scrape app_ids from the Google Play Store
 * category_list.js
   * Node file used to scrape categories from the Google Play Store
- 
+
 Run the apk_download.py tool:
 ```sh
 $ python3 apk_download.py
@@ -82,7 +82,7 @@ collection_type = "TOP_FREE"
 app_per_category = "5"
 ```
 
-&nbsp; 
+&nbsp;
 
 ### TODO
 
