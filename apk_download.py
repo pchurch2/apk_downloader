@@ -1,14 +1,27 @@
 #import gplaydl
 import sys
+import os
 import re
 from Naked.toolshed.shell import execute_js, muterun_js
+from gpapi.googleplay import GooglePlayAPI, RequestError
 
 
-# Variables
+# GooglePlay-Scraper Variables
 collection_type = "TOP_FREE"
-app_per_category = "5"
+app_per_category = "3"
 apk_initial_list = []
 apk_download_list = []
+
+
+# Login Variables
+#gsfId = 
+#authSubToken = 
+
+
+# Google Server Variables
+LOCALE = "us_US"
+TIMEZONE = "America/Chicago"
+server = GooglePlayAPI("us_US","America/Denver")
 
 
 def remove_duplicate_ids(id_list):
@@ -64,26 +77,50 @@ def generate_apk_list():
 
         # Remove any dupliacte app_id entries and sort in ascending order
         apk_download_list = remove_duplicate_ids(apk_initial_list)
-        apk_download_list.sort()
+        #apk_download_list.sort()
+
+        return apk_download_list
 
         # Print found apks
-        print("\nAPKs available for download:")
-        for apk in apk_download_list:
-            print(apk)
+        #print("\nAPKs available for download:")
+        #for apk in apk_download_list:
+        #    print(apk)
 
     else:
 
         sys.stderr.write(get_categories.stderr)
 
 
-# TO-DO - GPlayDL is not working reliably
-# Will try to get GooglePlay-API to download found APKs
-#def download_apks():
+def server_login():
 
+    print("\nLogging in with ac2dm token and gsfId.\n")
+    server.login(None, None, gsfId, authSubToken)
+
+
+def download_apks(download_apk):
+
+    app_id = download_apk
+    server.log(app_id)
+    
+    print("\nDownloading {}...".format(app_id))
+    
+    app = server.download(app_id)
+    
+    with open(app_id + ".apk", "wb") as apk_file:
+        for chunk in app.get("file").get("data"):
+            apk_file.write(chunk)
+        print("Success")
 
 def main():
 
-    generate_apk_list()
-    #download_apks()
+    library = generate_apk_list()
+    server_login()
+
+    # Download APKs
+    print("\nDownloading APKs.  Please wait...\n")
+    
+    for apk in library:
+        download_apks(apk)
+
 
 main()
