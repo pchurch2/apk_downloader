@@ -104,12 +104,18 @@ def download_apks(download_apk):
     
     print("\nDownloading {}...".format(app_id))
     
-    app = server.download(app_id)
+    try:
+        
+        app = server.download(app_id)
     
-    with open(app_id + ".apk", "wb") as apk_file:
-        for chunk in app.get("file").get("data"):
-            apk_file.write(chunk)
-        print("Success")
+        with open(app_id + ".apk", "wb") as apk_file:
+            for chunk in app.get("file").get("data"):
+                apk_file.write(chunk)
+            print("Success")
+            
+     except Exception:
+        
+        pass
 
 def main():
 
