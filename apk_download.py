@@ -154,25 +154,10 @@ def download_apks(download_apk):
                 #apk_file.write(apk_dir + "/" + app)
             print("Success")
     
-<<<<<<< HEAD
     except Exception:        
         
         pass
         print("Failed")
-=======
-    try:
-        
-        app = server.download(app_id)
-    
-        with open(app_id + ".apk", "wb") as apk_file:
-            for chunk in app.get("file").get("data"):
-                apk_file.write(chunk)
-            print("Success")
-            
-     except Exception:
-        
-        pass
->>>>>>> 1db2b4b508a926eccef49267bda927f304e3888e
 
 def main():
 
