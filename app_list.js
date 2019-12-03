@@ -7,11 +7,9 @@ const arg2_collection = args[1];
 const arg3_number = args[2];
 
 gplay.list({
-	category: arg1_category,
-    	collection: gplay.collection.arg2_collection,
-    	num: arg3_number
-	//category: gplay.category.GAME_ACTION,
-    	//collection: gplay.collection.TOP_FREE,
-    	//num: 2
+    category: arg1_category,
+    collection: gplay.collection.arg2_collection,
+    num: arg3_number,
+    throttle: 10
 }).then(console.log, console.log);
 
