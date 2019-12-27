@@ -58,6 +58,20 @@ $ pip3 install naked
 
 &nbsp;
 
+#### JADX
+
+Requires JADX to decompile apks.  Follow the install instructions at [JADX](https://github.com/skylot/jadx.git):
+
+Important:  JADX requires Java 8 (64-bit) or later, please ensure that's installed before installing JADX.
+
+```sh
+$ git clone https://github.com/skylot/jadx.git
+$ cd jadx
+$ ./gradlew dist
+```
+
+&nbsp;
+
 ### Installation and Usage
 
 ---
@@ -88,6 +102,4 @@ app_per_category = "5"
 
 ---
 
-- Get a working APK downloader:
-- [GPlayDL](https://github.com/rehmatworks/gplaydl) was initially working but now getting _Login Failure_ errors during runtime.
-- Will attempt to get [GooglePlay-API](https://github.com/NoMore201/googleplay-api) to work.
+
