@@ -13,7 +13,7 @@ from datetime import datetime
 
 # GooglePlay-Scraper Variables
 collection_type = "TOP_FREE"
-app_per_category = "30"
+app_per_category = "50"
 apk_initial_list = []
 apk_download_list = []
 category_apk_list = {}
@@ -32,7 +32,7 @@ apk_dir = "apks_" + timestamp
 
 # JADX Directory Variables
 jadx_bin_dir = "/store/whavey/apk_downloader/jadx/build/jadx/bin/jadx"  # Include only beginning /
-jadx_decompiled_dir = "/00_decompiled_apks/"                            # Include beginning and ending /
+jadx_decompiled_dir = "/00_decompiled_apks_" + timestamp + "/"          # Include beginning and ending /
 jadx_apk_downloader_dir = "/store/whavey/apk_downloader/"               # Include beginning and ending /
 
 def get_credentials():
