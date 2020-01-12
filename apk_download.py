@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #import gplaydl
 import sys
 import os
@@ -12,7 +13,7 @@ from datetime import datetime
 
 # GooglePlay-Scraper Variables
 collection_type = "TOP_FREE"
-app_per_category = "1"
+app_per_category = "30"
 apk_initial_list = []
 apk_download_list = []
 category_apk_list = {}
@@ -29,6 +30,10 @@ project_dir = os.getcwd()
 timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
 apk_dir = "apks_" + timestamp
 
+# JADX Directory Variables
+jadx_bin_dir = "/store/whavey/apk_downloader/jadx/build/jadx/bin/jadx"  # Include only beginning /
+jadx_decompiled_dir = "/00_decompiled_apks/"                            # Include beginning and ending /
+jadx_apk_downloader_dir = "/store/whavey/apk_downloader/"               # Include beginning and ending /
 
 def get_credentials():
 
@@ -166,16 +171,15 @@ def download_apks(get_apk, get_directory):
 
 def jadx():
 
-    start_dir = apk_dir
-    #start_dir = "apks_20191210-233249"
+    start_dir = apk_dir                     # Used for general use
+    #start_dir = "apks_20191216-225315"     # Used only for one time JADX use
     
     for dir_name, sub_dir_list, file_list in os.walk(start_dir):
         print('\nCurrent Directory: %s' % dir_name)
         
         for file_name in file_list:
             print('\nDecompiling %s...' % file_name)
-            subprocess.call(["/home/preston/Downloads/jadx/build/jadx/bin/jadx", "-d", start_dir + "/00_decompiled_apks/" + file_name, "/home/preston/git/apk_downloader/" + dir_name + "/" + file_name])
-
+            subprocess.call([jadx_bin_dir, "-d", start_dir + jadx_decompiled_dir + dir_name + "/" + file_name, jadx_apk_downloader_dir + dir_name + "/" + file_name])
 
 def main():
 
