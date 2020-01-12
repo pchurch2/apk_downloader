@@ -139,7 +139,6 @@ def server_login():
 
 def download_apks(get_apk, get_directory):
 
-    #app_id = download_apk
     app_id = get_apk
     server.log(app_id)
     
