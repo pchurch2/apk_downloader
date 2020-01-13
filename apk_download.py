@@ -13,7 +13,7 @@ from datetime import datetime
 
 # GooglePlay-Scraper Variables
 collection_type = "TOP_FREE"
-app_per_category = "1"
+app_per_category = "50"
 apk_initial_list = []
 apk_download_list = []
 category_apk_list = {}
